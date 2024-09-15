@@ -1,0 +1,159 @@
+body{
+    padding: 0;
+    margin: 0;
+    background:linear-gradient(to bottom right, blue 50%,#e07272 50%);
+}
+.box{
+   width: 10%;
+   padding-left: 1cm;
+   padding-top: 1cm;
+   padding-bottom: 1cm;
+   padding-right: 1cm;
+   }
+
+.form-box {
+width: 350px;
+text-align:center;
+margin-left: 5px;
+border: 0;
+}
+.form-box input[type="text"], input[type="password"]{
+width: 100%;
+margin-bottom: 5px;
+margin-left: 2cm;
+padding: 20px;
+font-size: 18px;
+box-sizing: border-box;
+border: 1px solid #eeebeb;
+border-radius: 5px;
+outline-color: #060708;
+color: #0b0b0c;
+background-color: #c4d4de;
+font-family: Arial, Helvetica, sans-serif;
+opacity: 0.7;
+}
+
+::placeholder
+{
+color: #1DA1F2;
+}
+.box form{
+  display: flex;
+  background-color: #faf8f8;
+  align-items: center;
+  width: 1000px;
+  height: 550px;
+  margin-left: 130px;
+  margin-top: 0.5px;
+  margin-bottom: 1px;
+  border: 1px solid rgb(241, 235, 235);
+  border-radius: 30px;
+  box-sizing: border-box;
+  box-shadow: 0px 50px 5px 50px solid rgb(18, 18, 18);
+}
+
+
+.logo-box img{
+
+width: 275px;
+display: flex;
+padding-left: 0cm;
+display: flex;
+border-radius: 10%;
+
+}
+h1{
+color: #1DA1F2;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 40px;
+text-align: left;
+margin-bottom: 20px;
+margin-left: 2cm;
+}
+.form-box input[type="button"]{
+width: 50%;
+margin-bottom: 15px;
+color: #fff;
+font-size: 20px;
+font-weight: 600;
+border-radius: 5px;
+border: none;
+padding: 13px 0px;
+cursor: pointer;
+background: #2067c5;
+}
+
+#button-1{
+
+width: 30%;
+color: #fff;
+font-size: 20px;
+font-weight: 600;
+border-radius: 0px;
+border: none;
+font-family: Arial, Helvetica, sans-serif;
+cursor: pointer;
+background: #2067c5;
+}
+#button-1:hover{
+background-color: #268ccb;
+}
+#button-2{
+width: 30%;
+margin-left: 20px;
+color: #2678d5;
+font-size: 20px;
+font-family: Arial, Helvetica, sans-serif;
+border-radius: 0px;
+border: 1px solid rgb(42, 88, 179);
+padding-left: 0cm;
+cursor: pointer;
+background: #fafbfc;
+
+}
+#create-btn{
+
+margin-top: 40px;
+width: 500px;
+float: left;
+justify-content: left;
+
+}
+#button-2:hover{
+background-color: #c4d4de;
+}
+#table{
+width: 100%;
+background: #eff1f333;
+margin-left: 2cm;
+margin-top: 5cm;
+margin-bottom: -10px;
+font-size: 14px;
+}
+#table a{
+text-decoration: none;
+color: #1DA1F2;
+}
+#table a:hover{
+text-decoration: underline;
+}
+#table table{
+width: 100%;
+border: none;
+}
+td,th{
+padding: 4px;
+}
+#td{
+width: 40%;
+background: #fbfcfc;
+margin-left: 14cm;
+margin-bottom: 10px;
+font-size: 14px;
+}
+#td p a{
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 100;
+color: #1DA1F2;
+text-decoration: none;
+}

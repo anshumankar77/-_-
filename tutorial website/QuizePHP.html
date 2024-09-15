@@ -1,0 +1,412 @@
+<html>
+  <head>
+    <title>Fortnite: Battle Royale Quiz App</title>
+    
+    <script>
+    var answers = ["B","A","B","B","B","C","B","C","B","C"],
+      tot = answers.length;
+  function getCheckedValue(radioName) {
+      var radios = document.getElementsByName(radioName);
+      for (var y = 0; y < radios.length; y++)
+          if (radios[y].checked) return radios[y].value;
+  }
+  function getScore() {
+      var score = 0;
+      for (var i = 0; i < tot; i++)
+          if (getCheckedValue("question" + i) === answers[i]) score += 1;
+      return score;
+  }
+  function returnScore() {
+      document.getElementById("myresults").innerHTML =
+          "Your score is " + getScore() + "/" + tot;
+      if (getScore() > 2) {
+          console.log("Bravo");
+      }
+  }
+  </script>
+  <style>
+    html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: sans-serif;
+    padding: 1rem;
+    background-color: orange;
+}
+.quiz,
+.choices {
+    list-style-type: none;
+    padding: 0;
+}
+.choices li {
+    margin-bottom: 5px;
+}
+.choices label {
+    display: flex;
+    align-items: center;
+}
+.choices label,
+input[type="radio"] {
+    cursor: pointer;
+}
+input[type="radio"] {
+    margin-right: 8px;
+}
+.view-results {
+    padding: 1rem;
+    cursor: pointer;
+    font-size: inherit;
+    color: white;
+    background: teal;
+    border-radius: 8px;
+    margin-right: 5px;
+}
+.my-results {
+    padding: 1rem;
+    border: 1px solid goldenrod;
+}
+  </style>
+  </head>
+  <body >
+    <ul class="quiz">
+      <li>
+          <h4>Who is the father of PHP?</h4>
+          <ul class="choices">
+              <li>
+                  <label
+                      ><input type="radio" name="question0" value="A" /><span
+                          >Drek Kolkevi</js></span
+                      ></label
+                  >
+              </li>
+              <li>
+                  <label
+                      ><input type="radio" name="question0" value="B" /><span
+                          >Rasmus Lerdorf</script></span
+                      ></label
+                  >
+              </li>
+              <li>
+                  <label
+                      ><input type="radio" name="question0" value="C" /><span
+                          >Willam Makepiece</span
+                      ></label
+                  >
+              </li>
+              <li>
+                  <label
+                      ><input type="radio" name="question0" value="D" /><span
+                          >List Barely</span
+                      ></label
+                  >
+              </li>
+          </ul>
+      </li>
+      <li>
+          <h4> What does PHP stand for?
+            
+            </h4>
+          <ul class="choices">
+              <li>
+                  <label
+                      ><input type="radio" name="question1" value="A" /><span
+                          >PHP stands for Preprocessor Home Page</span
+                      ></label
+                  >
+              </li>
+              <li>
+                  <label
+                      ><input type="radio" name="question1" value="B" /><span
+                          >PHP stands for Pretext Hypertext Processor</span
+                      ></label
+                  >
+              </li>
+              <li>
+                  <label
+                      ><input type="radio" name="question1" value="C" /><span
+                          >PHP stands for Hypertext Preprocessor</span
+                      ></label
+                  >
+              </li>
+              <li>
+                  <label
+                      ><input type="radio" name="question1" value="D" /><span
+                          >PHP stands for Personal Hyper Processor</span
+                      ></label
+                  >
+              </li>
+          </ul>
+      </li>
+      <li>
+          <h4> PHP stands for Personal Hyper Processor</h4>
+          <ul class="choices">
+              <li>
+                  <label
+                      ><input type="radio" name="question2" value="A" /><span
+                          ><?php ?></span
+                      ></label
+                  >
+              </li>
+              <li>
+                  <label
+                      ><input type="radio" name="question2" value="B" /><span
+                          >< php ></span
+                      ></label
+                  >
+              </li>
+              <li>
+                  <label
+                      ><input type="radio" name="question2" value="C" /><span
+                          >< ? php ?></span
+                      ></label
+                  >
+              </li>
+              <li>
+                  <label
+                      ><input type="radio" name="question2" value="D" /><span
+                          ><??></span
+                      ></label
+                  >
+              </li>
+          </ul>
+      </li>
+      <li>
+        <h4>Which of the following is the correct way to add a comment in PHP code?</h4>
+        <ul class="choices">
+            <li>
+                <label
+                    ><input type="radio" name="question3" value="A" /><span
+                        >#</span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question3" value="B" /><span
+                        >//</span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question3" value="C" /><span
+                        >/**/</span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question3" value="D" /><span
+                        >all of the mentioned</span
+                    ></label
+                >
+            </li>
+        </ul>
+    </li>
+    <li>
+    <h4>How to define a function in PHP? </h4>
+    <ul class="choices">
+        <li>
+            <label
+                ><input type="radio" name="question4" value="A" /><span
+                    >functionName(parameters) {function body}</span
+                ></label
+            >
+        </li>
+        <li>
+            <label
+                ><input type="radio" name="question4" value="B" /><span
+                    > function {function body}</span
+                ></label
+            >
+        </li>
+        <li>
+            <label
+                ><input type="radio" name="question4" value="C" /><span
+                    >function functionName(parameters) {function body}</span
+                ></label
+            >
+        </li>
+    </ul>
+    </li>
+    <li>
+        <h4>What will be the output of the following PHP code?</h4>
+        <div style="height: 150px;width: 400px;border: 2px solid black;background-color: aqua;"><?php<br>
+            $x = 10;<br>
+            $y = 20;<br>
+            if ($x > $y && 1||1)<br>
+                print "1000 PHP MCQ" ;<br>
+            else<br>
+                print "Welcome to Sanfoundry";<br>
+            ?></div>
+        <ul class="choices">
+            <li>
+                <label
+                    ><input type="radio" name="question5" value="A" /><span
+                        > no output</span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question5" value="B" /><span
+                        >Welcome to Sanfoundry</span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question5" value="C" /><span
+                        >1000 PHP MCQ </span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question5" value="D" /><span
+                        >error</span
+                    ></label
+                >
+            </li>
+        </ul>
+        </li>
+        <li>
+            <h4>Which is the right way of declaring a variable in PHP?</h4>
+            <ul class="choices">
+                <li>
+                    <label
+                        ><input type="radio" name="question6" value="A" /><span
+                            > $3hello</span
+                        ></label
+                    >
+                </li>
+                <li>
+                    <label
+                        ><input type="radio" name="question6" value="B" /><span
+                            >$_hello</span
+                        ></label
+                    >
+                </li>
+                <li>
+                    <label
+                        ><input type="radio" name="question6" value="C" /><span
+                            >$this</span
+                        ></label
+                    >
+                </li>
+            </ul>
+            </li>
+            <li>
+                <h4>Which of the following PHP functions can be used for generating unique ids?</h4>
+                <ul class="choices">
+                    <li>
+                        <label
+                            ><input type="radio" name="question7" value="A" /><span
+                                >md5()</span
+                            ></label
+                        >
+                    </li>
+                    <li>
+                        <label
+                            ><input type="radio" name="question7" value="B" /><span
+                                >uniqueid()</span
+                            ></label
+                        >
+                    </li>
+                    <li>
+                        <label
+                            ><input type="radio" name="question7" value="C" /><span
+                                > mdid()</span
+                            ></label
+                        >
+                    </li>
+                    <li>
+                        <label
+                            ><input type="radio" name="question7" value="Drek" /><span
+                                > id()</span
+                            ></label
+                        >
+                    </li>
+                </ul>
+                </li>
+                <li>
+                    <h4>In the following PHP program, what is/are the properties?</h4>
+                    <div style="height: 150px;width: 400px;border: 2px solid black;background-color: aqua;">
+                    
+                    </div>
+
+                    <ul class="choices">
+                        <li>
+                            <label
+                                ><input type="radio" name="question8" value="A" /><span
+                                    >if i=5</span
+                                ></label
+                            >
+                        </li>
+                        <li>
+                            <label
+                                ><input type="radio" name="question8" value="B" /><span
+                                    >if (i==5)</span
+                                ></label
+                            >
+                        </li>
+                        <li>
+                            <label
+                                ><input type="radio" name="question8" value="C" /><span
+                                    >if i==5 then</span
+                                ></label
+                            >
+                        </li>
+                        <li>
+                            <label
+                                ><input type="radio" name="question8" value="D" /><span
+                                    >if i=5 then</span
+                                ></label
+                            >
+                        </li>
+                    </ul>
+                    </li>
+                    <li>
+                        <h4>How to write an IF statement for executing some code if "i" is NOT equal to 5?</h4>
+                        <ul class="choices">
+                            <li>
+                                <label
+                                    ><input type="radio" name="question9" value="A" /><span
+                                        >if(i<>5)</span
+                                    ></label
+                                >
+                            </li>
+                            <li>
+                                <label
+                                    ><input type="radio" name="question9" value="B" /><span
+                                        >if i <> 5</span
+                                    ></label
+                                >
+                            </li>
+                            <li>
+                                <label
+                                    ><input type="radio" name="question9" value="C" /><span
+                                        >if(i !=5)</span
+                                    ></label
+                                >
+                            </li>
+                            <li>
+                                <label
+                                    ><input type="radio" name="question9" value="D" /><span
+                                        >if i !=5 then </span
+                                    ></label
+                                >
+                            </li>
+                        </ul>
+                        </li>
+        
+  </ul>
+  <button class="view-results" onclick="returnScore()">View Results</button>
+  <span id="myresults" class="my-results">My results will appear here</span>
+  </body>
+</html>

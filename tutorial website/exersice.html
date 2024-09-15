@@ -1,0 +1,192 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 700px;
+  height: 300px;
+  border-radius: 30px;
+  border: 1px solid none;
+  perspective: 4000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+ 
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #720959;
+  border-radius: 30px;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: #6e0323;
+  border-radius: 30px;
+  color: white;
+  transform: rotateY(180deg);
+  font-size: 0.8cm;
+  align-items: center;
+  text-align: center;
+  padding-top: 30px;
+}
+.div1{
+    height: 5%;
+    width: 100%;
+}
+.h1{
+  padding-top: 100px;
+  font-size: 1.5cm;
+  color: rgb(235, 239, 240);
+}
+input[type=submit]{
+  width: 300px;
+  height: 50px;
+  font-size: 0.6cm;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #2196F3;
+
+}
+input[type="submit"]:hover{
+background-color: #04AA6D;
+}
+</style>
+</head>
+<body>
+<div class="div1">
+<h1 align="center">QUIZZES</h1>
+</div>
+<div style="height: 100%;width: 100%;">
+    
+    <div style="height: 40%;width: 100%;">
+        <div style="height: 100%;width: 50%;float: left;">
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <!-- <img src="img1.jpeg" alt="Paris" style="width:300px;height:200px"> -->
+      <h1 class="h1">HTML QUIZ</h1>
+    </div>
+    <div class="flip-box-back">
+      <!-- <a href="">html exre</a> -->
+      <h1>Start the QUIZ</h1>
+      <br>
+      <font size="3">Good luck!</font>
+      <br>
+      <br>
+      <form action="QuizeHTML.html">
+        <input type="submit" value="Start the HTML Quiz">
+
+      </form>
+
+    </div>
+  </div>
+</div>
+        </div>
+        <div style="height: 100%;width: 50%;float: right;">
+        <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <!-- <img src="img1.jpeg" alt="Paris" style="width:300px;height:200px"> -->
+                <h1 class="h1">CSS QUIZ</h1>
+              </div>
+              <div class="flip-box-back">
+                <!-- <h2>Paris</h2>
+                <p>What an amazing city</p> -->
+                <h1>Start the QUIZ</h1>
+      <br>
+      <font size="3">Good luck!</font>
+      <br>
+      <br>
+      <form action="QuizeCSS.html">
+        <input type="submit"  value="Start the CSS Quiz">
+
+      </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+    </div>
+   <div style="height: 10%;width: 100%;"></div>
+    <div style="height: 40%;width: 100%;">
+        <div style="height: 100%;width: 50%;float: left;">
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <!-- <img src="img1.jpeg" alt="Paris" style="width:300px;height:200px"> -->
+      <h1 class="h1">JavaScript QUIZ</h1>
+    </div>
+    <div class="flip-box-back">
+      <!-- <h2>Paris</h2>
+      <p>What an amazing city</p> -->
+      <h1>Start the QUIZ</h1>
+      <br>
+      <font size="3">Good luck!</font>
+      <br>
+      <br>
+      <form action="">
+        <input type="submit" value="Start the JS Quiz">
+
+      </form>
+    </div>
+  </div>
+</div>
+        </div>
+        <div style="height: 100%;width: 50%;float: right;">
+        <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <!-- <img src="img1.jpeg" alt="Paris" style="width:300px;height:200px"> -->
+                <h1 class="h1">PHP QUIZ</h1>
+              </div>
+              <div class="flip-box-back">
+                <!-- <h2>Paris</h2>
+                <p>What an amazing city</p> -->
+                <h1>Start the QUIZ</h1>
+      <br>
+      <font size="3">Good luck!</font>
+      <br>
+      <br>
+      <form action="">
+        <input type="submit" value="Start the PHP Quiz">
+
+      </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+</div>
+</body>
+</html>

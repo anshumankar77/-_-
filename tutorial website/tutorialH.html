@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>TUTORIALS</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+        <script> 
+        $(document).ready(function(){
+          $("#flip").click(function(){
+            $("#panel").slideToggle("slow");
+          });
+        });
+        </script>
+        
+        <style>
+             .cbox{
+                border:4px solid #0000;
+                border-radius:30px;
+                padding: 8px;
+                text-decoration: none;
+                background:
+                linear-gradient(white,white) padding-box,
+                linear-gradient(rgb(237, 43, 13),rgb(23, 9, 180)) border-box;
+                  }
+            .ban{
+                border:4px solid #0000;
+                border-radius:30px;
+                padding: 8px;
+                text-decoration: none;
+                background:
+                linear-gradient(white,white) padding-box,
+                linear-gradient(rgb(237, 43, 13),rgb(23, 9, 180)) border-box;
+                /* border: 1px solid;
+                padding: 10px; */
+                box-shadow:  10px 10px 10px 10px #03030e;
+            }
+            
+        
+            *{
+                 margin: 0;
+                 padding: 0px;
+                box-sizing: border-box;
+
+            }
+            #panel, #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+}
+        #panel {
+            padding: 30px;
+            display: none;
+}
+
+        </style>
+    </head>
+    <body>
+        <div id="flip">Click to slide the panel down or up</div>
+        <div style="height: 100%;width: 100%;background-color: rgb(16, 141, 186);" id="panel">
+        <div style="height: 100%;width: 10%;float: left;"></div>
+        <div style="height: 100%;width: 10%;float: right;"></div>
+        <div style="height: 50%;width: 100%;">
+
+            <div style="height: 90%;width: 30%;float: left;" class="ban">
+                <br><center>
+                    <b style="font-size: 2cm;">HTML</b><br><br>
+                    <font style="font-size: 0.8cm;">The language for building web pages</font>
+                </center>
+                <br>
+                <a href="htmlTU.html" class="cbox">Learn HTML</a>
+                &nbsp;
+                <a href="beforeVideo.html" class="cbox">Video Tutorial</a>
+                &nbsp;
+                <!-- <a href="" class="cbox">HTML Reference</a> -->
+            </div>
+            <div style="height: 90%;width: 30%;float: right;" class="ban">
+                <center><br>
+                    <b style="font-size: 2cm;">CSS</b><br><br>
+                    <font style="font-size: 0.8cm;">The language for styling web pages</font>
+                    <br><br>
+                </center>
+                <a href="beforeCssTu.html" class="cbox">Learn CSS</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="beforeVideoCSS.html" class="cbox">Video Tutorial</a>
+                &nbsp;&nbsp;&nbsp;
+                <!-- <a href="" class="cbox">CSS Reference</a> -->
+            </div>
+            <!-- <div style="height: 5%;width: 100%;background-color: yellow;"></div> -->
+        </div>
+             
+                <div style="height: 45%;width: 30%;float: left;" class="ban"> 
+                    <br>
+                    <center>
+                        <b style="font-size: 2cm;">JavaScript</b><br><br>
+                        <font style="font-size: 0.8cm;">The language for programming web pages</font>
+                        <br><br>
+                    </center>
+                    <a href="learnJS.html" class="cbox">Learn JS</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="beforeVideoJS.html" class="cbox">Video Tutorial</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <!-- <a href="" class="cbox">JS Reference</a> -->
+                </div>
+                <div style="height: 45%;width: 30%;float: right;" class="ban">
+                    <br>
+                   
+                    <center>
+                        <b style="font-size: 2cm;">PHP</b><br><br>
+                        <font style="font-size: 1cm;">A web server programming language</font>
+                        <br><br>
+                        <a href="learnPHP.html" class="cbox">Learn PHP</a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="beforeVideoPHP.html" class="cbox">Video Tutorial</a>
+                        &nbsp;&nbsp;&nbsp;
+                        <!-- <a href="" class="cbox">PHP Reference</a> -->
+                    </center>
+                </div>
+            </div>  
+    </body>
+</html>

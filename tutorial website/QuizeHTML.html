@@ -1,0 +1,377 @@
+<html>
+  <head>
+    <title>Fortnite: Battle Royale Quiz App</title>
+    
+    <script>
+    var answers = ["B","B","C","B","B","A","B","B","D","B"],
+      tot = answers.length;
+  function getCheckedValue(radioName) {
+      var radios = document.getElementsByName(radioName);
+      for (var y = 0; y < radios.length; y++)
+          if (radios[y].checked) return radios[y].value;
+  }
+  function getScore() {
+      var score = 0;
+      for (var i = 0; i < tot; i++)
+          if (getCheckedValue("question" + i) === answers[i]) score += 1;
+      return score;
+  }
+  function returnScore() {
+      document.getElementById("myresults").innerHTML =
+          "Your score is " + getScore() + "/" + tot;
+      if (getScore() > 2) {
+          console.log("Bravo");
+      }
+  }
+  </script>
+  <style>
+    html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: sans-serif;
+    padding: 1rem;
+    background-color: orange;
+}
+.quiz,
+.choices {
+    list-style-type: none;
+    padding: 0;
+}
+.choices li {
+    margin-bottom: 5px;
+}
+.choices label {
+    display: flex;
+    align-items: center;
+}
+.choices label,
+input[type="radio"] {
+    cursor: pointer;
+}
+input[type="radio"] {
+    margin-right: 8px;
+}
+.view-results {
+    padding: 1rem;
+    cursor: pointer;
+    font-size: inherit;
+    color: white;
+    background: teal;
+    border-radius: 8px;
+    margin-right: 5px;
+}
+.my-results {
+    padding: 1rem;
+    border: 1px solid goldenrod;
+}
+  </style>
+  </head>
+  <body >
+    <ul class="quiz">
+      <li>
+          <h4>What does HTML stand for?</h4>
+          <ul class="choices">
+              <li>
+                  <label
+                      ><input type="radio" name="question0" value="A" /><span
+                          >Hyperlinks and Text Markup Language</span
+                      ></label
+                  >
+              </li>
+              <li>
+                  <label
+                      ><input type="radio" name="question0" value="B" /><span
+                          >Hyper Text Markup Language</span
+                      ></label
+                  >
+              </li>
+              <li>
+                  <label
+                      ><input type="radio" name="question0" value="C" /><span
+                          >Home Tool Markup Language</span
+                      ></label
+                  >
+              </li>
+              <!-- <li>
+                  <label
+                      ><input type="radio" name="question0" value="D" /><span
+                          >4</span
+                      ></label
+                  >
+              </li> -->
+          </ul>
+      </li>
+      <li>
+          <h4>Who is making the Web standards?</h4>
+          <ul class="choices">
+              <li>
+                  <label
+                      ><input type="radio" name="question1" value="A" /><span
+                          >Mozilla</span
+                      ></label
+                  >
+              </li>
+              <li>
+                  <label
+                      ><input type="radio" name="question1" value="B" /><span
+                          >The world wide web consortium</span
+                      ></label
+                  >
+              </li>
+              <li>
+                  <label
+                      ><input type="radio" name="question1" value="C" /><span
+                          >microsoft</span
+                      ></label
+                  >
+              </li>
+              <li>
+                  <label
+                      ><input type="radio" name="question1" value="D" /><span
+                          >Google</span
+                      ></label
+                  >
+              </li>
+          </ul>
+      </li>
+      <li>
+          <h4>Choose the correct HTML element for the largest heading:</h4>
+          <ul class="choices">
+              <li>
+                  <label
+                      ><input type="radio" name="question2" value="A" /><span
+                          >< heading></span
+                      ></label
+                  >
+              </li>
+              <li>
+                  <label
+                      ><input type="radio" name="question2" value="B" /><span
+                          >< h6></span
+                      ></label
+                  >
+              </li>
+              <li>
+                  <label
+                      ><input type="radio" name="question2" value="C" /><span
+                          >< h1></span
+                      ></label
+                  >
+              </li>
+              <li>
+                  <label
+                      ><input type="radio" name="question2" value="D" /><span
+                          >< head></span
+                      ></label
+                  >
+              </li>
+          </ul>
+      </li>
+      <li>
+        <h4>What is the correct HTML element for inserting a line break?</h4>
+        <ul class="choices">
+            <li>
+                <label
+                    ><input type="radio" name="question3" value="A" /><span
+                        >< break></span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question3" value="B" /><span
+                        >< br></span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question3" value="C" /><span
+                        >< lb></span
+                    ></label
+                >
+            </li>
+        </ul>
+    </li>
+    <li>
+    <h4>What is the correct HTML for adding a background color?</h4>
+    <ul class="choices">
+        <li>
+            <label
+                ><input type="radio" name="question4" value="A" /><span
+                    >< body bg="yellow"></span
+                ></label
+            >
+        </li>
+        <li>
+            <label
+                ><input type="radio" name="question4" value="B" /><span
+                    >< body style="background-color:yellow;"></span
+                ></label
+            >
+        </li>
+        <li>
+            <label
+                ><input type="radio" name="question4" value="C" /><span
+                    >< background>yellow</ background></span
+                ></label
+            >
+        </li>
+    </ul>
+    </li>
+    <li>
+        <h4>Choose the correct HTML element to define important text</h4>
+        <ul class="choices">
+            <li>
+                <label
+                    ><input type="radio" name="question5" value="A" /><span
+                        >< strong></span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question5" value="B" /><span
+                        >< i></span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question5" value="C" /><span
+                        >< important></span
+                    ></label
+                >
+            </li>
+        </ul>
+        </li>
+        <li>
+            <h4>Choose the correct HTML element to define emphasized text</h4>
+            <ul class="choices">
+                <li>
+                    <label
+                        ><input type="radio" name="question6" value="A" /><span
+                            >< italic></span
+                        ></label
+                    >
+                </li>
+                <li>
+                    <label
+                        ><input type="radio" name="question6" value="B" /><span
+                            >< em></span
+                        ></label
+                    >
+                </li>
+                <li>
+                    <label
+                        ><input type="radio" name="question6" value="C" /><span
+                            >< i></span
+                        ></label
+                    >
+                </li>
+            </ul>
+            </li>
+            <li>
+                <h4>What is the correct HTML for creating a hyperlink?</h4>
+                <ul class="choices">
+                    <li>
+                        <label
+                            ><input type="radio" name="question7" value="A" /><span
+                                >< a name="link">name of link< /a></span
+                            ></label
+                        >
+                    </li>
+                    <li>
+                        <label
+                            ><input type="radio" name="question7" value="B" /><span
+                                >< a href="link">name of link< /a></span
+                            ></label
+                        >
+                    </li>
+                    <li>
+                        <label
+                            ><input type="radio" name="question7" value="C" /><span
+                                >< a url="link">name of link< /a></span
+                            ></label
+                        >
+                    </li>
+                    <li>
+                        <label
+                            ><input type="radio" name="question7" value="C" /><span
+                                >< a>link< /a></span
+                            ></label
+                        >
+                    </li>
+                </ul>
+                </li>
+                <li>
+                    <h4>Which character is used to indicate an end tag?</h4>
+                    <ul class="choices">
+                        <li>
+                            <label
+                                ><input type="radio" name="question8" value="A" /><span
+                                    >*</span
+                                ></label
+                            >
+                        </li>
+                        <li>
+                            <label
+                                ><input type="radio" name="question8" value="B" /><span
+                                    >^</span
+                                ></label
+                            >
+                        </li>
+                        <li>
+                            <label
+                                ><input type="radio" name="question8" value="C" /><span
+                                    ><</span
+                                ></label
+                            >
+                        </li>
+                        <li>
+                            <label
+                                ><input type="radio" name="question8" value="D" /><span
+                                    >/</span
+                                ></label
+                            >
+                        </li>
+                    </ul>
+                    </li>
+                    <li>
+                        <h4>How can you open a link in a new tab/browser window?</h4>
+                        <ul class="choices">
+                            <li>
+                                <label
+                                    ><input type="radio" name="question9" value="A" /><span
+                                        >< a href="url" new></span
+                                    ></label
+                                >
+                            </li>
+                            <li>
+                                <label
+                                    ><input type="radio" name="question9" value="B" /><span
+                                        >< a href="url" target="_blank"</span
+                                    ></label
+                                >
+                            </li>
+                            <li>
+                                <label
+                                    ><input type="radio" name="question9" value="C" /><span
+                                        >< a href="url" target="new"></span
+                                    ></label
+                                >
+                            </li>
+                        </ul>
+                        </li>
+        
+  </ul>
+  <button class="view-results" onclick="returnScore()">View Results</button>
+  <span id="myresults" class="my-results">My results will appear here</span>
+  </body>
+</html>
