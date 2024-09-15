@@ -1,0 +1,16 @@
+CREATE TABLE blood_bank (
+id int,
+blood_bank varchar(100),
+created_at datetime ,
+updated_at datetime,
+primary key(id));
+
+select * from blood_bank;
+
+INSERT INTO blood_bank (id, blood_bank, created_at, updated_at) VALUES
+(1, ‘Rotary Club Blood Bank’, ‘2020-12-12 9:43:17', ‘2020-12-12 09:43:17'),
+(2, ‘Sri Surya Sakthi Voluntary Blood Bank’, ‘2020-12-12 09:43:17", ‘2020-12-12 09:43:17"),
+(3, ‘Govt. Blood Bank’, ‘2020-12-12 09:43:17", ‘2020-12-12 09:43:17");
+
+ 
+

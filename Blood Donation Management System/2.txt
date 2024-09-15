@@ -1,0 +1,25 @@
+CREATE TABLE blood_groups (
+id int,
+blood_group varchar(100) ,
+created_at datetime ,
+updated_at datetime,
+primary key(id));
+
+INSERT INTO blood_groups (id, blood_group, created_at, updated_at) VALUES
+(1, 'A-positive', '2020-12-12 09:34:00', '2020-12-12 09:34:00'),
+(2, 'A-negative', '2020-12-12 09:34:00', '2020-12-12 09:34:00'),
+(3, 'B-positive', '2020-12-12 09:34:00', '2020-12-12 09:34:00'),
+(4, 'B-negative', '2020-12-12 09:34:00', '2020-12-12 09:34:00'),
+(5, 'AB-positive', '2020-12-12 09:34:00', '2020-12-12 09:34:00'),
+(6, 'AB-negative', '2020-12-12 09:34:00', '2020-12-12 09:34:00'),
+(7, 'O-positive', '2020-12-12 09:34:00', '2020-12-12 09:34:00'),
+(8, 'O-negative', '2020-12-12 09:34:00', '2020-12-12 09:34:00');
+
+ 
+
+ 
+
+  
+
+  
+

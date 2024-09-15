@@ -1,0 +1,12 @@
+CREATE TABLE patients (
+id int, 
+patient_id varchar(100), 
+name varchar(100),
+mobile varchar(100),
+primary key(id));
+
+INSERT INTO patients (id, patient_id, name , mobile) VALUES
+(1, 'pl', 'sandeep', '8524716932'),
+(2, 'p2', 'asif', '19965412789'),
+(3, 'p3', 'Javeed', '3479852146');
+

@@ -1,0 +1,19 @@
+CREATE TABLE camp (
+id int,
+camp varchar(100),
+address varchar(100),
+venue varchar(100) ,
+created_at datetime ,
+updated_at datetime,
+primary key (id));
+
+INSERT INTO camp (id, camp, address, venue, created_at, updated_at) VALUES
+(1,'amaravathi_bloodcamp','amaravathi','mangalagiri','2020-12-12 11:10:48','2020-12-12
+11:10:48'),
+
+(2,'vizag_bloodcamp','vishakapatnam','arakuvalley','2020-12-12 11:10:48','2020-12-12
+11:10:48'),
+
+(3,'vizag2_bloodcamp','vishakaptnam','steelplant','2020-12-12 11:10:48','2020-12-12
+11:10:48');
+

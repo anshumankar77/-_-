@@ -1,0 +1,32 @@
+CREATE TABLE donors (
+id int,
+donor_id varchar(100),
+name varchar(100),
+gender varchar (100),
+age varchar (100),
+address varchar(100),
+mobile varchar(10),
+alternate_mobile varchar(100),
+blood_group varchar (100),
+disease varchar(100),
+units varchar(100),
+created_at datetime,
+updated_at datetime, 
+primary key(id) );
+
+INSERT INTO donors (id, donor_id, name, gender, age, address, mobile, alternate_mobile,
+blood_group, disease,units ,created_at, updated_at) VALUES
+
+(1, 'dn1', 'santosh kumar', 'male', '45', 'mumbai', '1234567890', '9876543210', '7', '-
+','1', '2020-12-12 12:00:04', '2020-12-12 12:00:04'),
+
+(2, 'dn1', 'sanjay swain', 'male', '50', 'mumbai', '0987456321', '5698741254', '7', '-
+','2', '2020-12-12 12:00:04', '2020-12-12 12:00:04'),
+
+(3, 'dn1', 'Madhusudan Behera', 'male', '40', 'mumbai', '5987436514', '5987456321', '7',
+'-','3', '2020-12-12 12:00:04', '2020-12-12 12:00:04');
+
+  
+
+ 
+

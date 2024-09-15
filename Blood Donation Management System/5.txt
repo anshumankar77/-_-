@@ -1,0 +1,20 @@
+CREATE TABLE hospitals (
+
+id int,
+
+hospitals varchar (100) ,
+
+created_at datetime ,
+
+updated_at datetime, Primary key(id));
+
+INSERT INTO hospitals (id, hospitals, created_at, updated_at) VALUES
+
+(4, 'A.N. Beach Hospital', '2020-12-12 12:01:27', '2020-12-12 12:01:27'),
+(2, 'Aarif Nursing Home', '2020-12-12 12:01:28', '2020-12-12 12:01:28'),
+(3, 'AakarAsha Hospitals', '2020-12-12 12:01:28', '2020-12-12 12:01:28');
+
+ 
+
+  
+
