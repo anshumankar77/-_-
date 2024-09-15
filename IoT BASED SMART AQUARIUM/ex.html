@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sensor Readings</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+	<script src="script.js"></script>
+	<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style type="text/css">
+        body {
+            background: linear-gradient(to bottom, #2e1fd4, #FF0000);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .data-container {
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #FFF;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .data-item {
+            text-align: center;
+        }
+
+        .data-item h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .data-item p {
+            font-size: 48px;
+            font-weight: bold;
+            color: #6EB7FF;
+        }
+
+        .data-head {
+            margin: auto;
+            width: 50%;
+            text-align: center;
+            font-size: 45px;
+            font-weight: bold;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #FFF;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="data-head">Sensor Realtime Readings</div>
+    <div class="data-container">
+        <div class="data-item">
+            <h2>Temperature</h2>
+            <p class="value" id="temperature">00 &#8451;</p>
+        </div>
+        <div class="data-item">
+            <h2>Turbidity</h2>
+            <p class="value" id="turbidity">00%</p>
+        </div>
+
+    </div>
+    <div class="data-head">Control panel</div>
+
+    <div class="data-container">
+        <div class="data-item">
+            <a class = "icon1" >
+				<i class="fas fa-4x fa-tint"></i>
+              <br> Water In
+			</a>
+            <div class= "toggle-btn" id="unact">
+				<div class= "inner-circle">
+	
+				</div>
+			</div>
+			<div class= "toggle-btn active" id="act" >
+				<div class= "inner-circle">
+	
+				</div>
+			</div>
+        </div>
+        <div class="data-item">
+            <a class = "icon1" >
+				<i class="fas fa-4x fa-water"></i>
+			</a>
+          <br> Water Out
+            <div class= "toggle-btn1" id="unact1">
+				<div class= "inner-circle">
+	
+				</div>
+			</div>
+			<div class= "toggle-btn1 active" id="act1" >
+				<div class= "inner-circle">
+	
+				</div>
+			</div>
+        </div>
+    </div>
+
+    <!-- the scripts for products you want to access must be added-->
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration here (Do not use the existing configuration)
+        const firebaseConfig = {
+            apiKey: "AIzaSyC7eLfOI2WLsymgPv_yRIxYnlPgwT4QVCA",
+            authDomain: "iot-project-a3829.firebaseapp.com",
+            databaseURL: "https://iot-project-a3829-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "iot-project-a3829",
+            storageBucket: "iot-project-a3829.appspot.com",
+            messagingSenderId: "1094689695698",
+            appId: "1:1094689695698:web:7663cebbc0d86ece868a0b",
+            measurementId: "G-F9B0QZREY3"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // getting reference to the database
+        var database = firebase.database();
+
+        //getting reference to the data we want
+        var dataRef1 = database.ref('Turbidity/Turbidity_Voltage');
+        var dataRef2 = database.ref('DS18b20/Temperature');
+
+        // var motor1Control = document.getElementById("Motor/M1Status");
+        // var motor2Control = document.getElementById("Motor/M2Status");
+
+
+        //fetch the data
+        dataRef1.on('value', function (getdata1) {
+            var humi = getdata1.val();
+            document.getElementById('turbidity').innerHTML = humi + "%";
+        })
+
+        dataRef2.on('value', function (getdata2) {
+            var temp = getdata2.val();
+            document.getElementById('temperature').innerHTML = temp + "&#8451;";
+        })
+        // motor1Control.addEventListener("click", function () {
+        //     const status = motor1Control.checked ? 1 : 0;
+        //     database.ref().update({ "M1Status": status });
+        // });
+
+        // motor2Control.addEventListener("click", function () {
+        //     const status = motor2Control.checked ? 1 : 0;
+        //     database.ref().update({ "M2Status": status });
+        // });
+
+        // var M1Status;
+        // var M2Status;
+        // database.ref().on("value", function (snap) {
+        //     M1Status = snap.val().M1Status;
+        //     M2Status = snap.val().M2Status;
+        //     if (M1Status == "1") {
+        //         document.getElementById("unact").style.display = "none";
+        //         document.getElementById("act").style.display = "block";
+        //     } else {
+        //         document.getElementById("unact").style.display = "block";
+        //         document.getElementById("act").style.display = "none";
+        //     }
+        //     if (M2Status == "1") {
+        //         document.getElementById("unact1").style.display = "none";
+        //         document.getElementById("act1").style.display = "block";
+        //     } else {
+        //         document.getElementById("unact1").style.display = "block";
+        //         document.getElementById("act1").style.display = "none";
+        //     }
+
+        // });
+        // $(".toggle-btn").click(function () {
+        //     var firebaseRef = firebase.database().ref().child("M1Status");
+        //     if (Led1Status == "1") {
+        //         firebaseRef.set("0");
+        //         Led1Status = "0";
+        //     } else {
+        //         firebaseRef.set("1");
+        //         Led1Status = "1";
+        //     }
+        // })
+        // $(".toggle-btn1").click(function () {
+        //     var firebaseRef = firebase.database().ref().child("M2Status");
+        //     if (Led2Status == "1") {
+        //         firebaseRef.set("0");
+        //         Led2Status = "0";
+        //     } else {
+        //         firebaseRef.set("1");
+        //         Led2Status = "1";
+        //     }
+        // })
+
+
+
+    </script>
+
+</body>
+
+</html>
